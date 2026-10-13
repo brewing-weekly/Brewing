@@ -29,12 +29,24 @@
 
 ## 往期
 
-- [第 1 期：当关税成为成本](docs/issue-001.md)
+- [第 1 期：当关税成为成本](docs/issue-001.md)（2026-10-09）
+- 第 2 期：AI 进行时（Nadella：模型是企业内部风险）——**草稿中，未发布**
 
 ## 订阅方式
 
 RSS：[feed.xml](feed.xml)
 
+站点：[brewing-weekly.github.io/Brewing](https://brewing-weekly.github.io/Brewing/)
+
+## 授权
+
+内容版权归作者所有，转载须注明出处。代码与站点模板以 MIT 授权，详见 [LICENSE](LICENSE)。
+
+## 联系方式
+
+- 作者：zhangxunnj
+- 反馈：GitHub Issues（本仓库）
+
 ---
 
-署名：zhangxunnj
+一夕运粮，一期酝酿。
