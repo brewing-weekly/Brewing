@@ -3,8 +3,14 @@
 <channel>
 <title>酝酿 Brewing</title>
 <link>https://brewing-weekly.github.io/Brewing/</link>
-<description>一夕运粮，一期酝酿。一份产业周刊：农牧、合成生物学、AI，以及产业研究的方法。</description>
+<description>一夕运粮，一期酝酿。一份产业与认知周刊：农牧产业链、五维健康前沿、认知方法论与人机协作。</description>
 <language>zh-CN</language>
+<item>
+<title>《酝酿》第 2 期：粮商为什么来、为什么走</title>
+<link>https://brewing-weekly.github.io/Brewing/docs/issue-002.html</link>
+<pubDate>Fri, 16 Oct 2026 08:00:00 +0800</pubDate>
+<description>粮商为什么来、为什么走。嘉吉 Q1 业绩承压、全球猪肉供需再平衡、蛋氨酸贸易救济；Nadella 谈模型作为企业内部风险、State of AI 2026、费德勒毕业演讲。</description>
+</item>
 <item>
 <title>《酝酿》第 1 期：当关税成为成本</title>
 <link>https://brewing-weekly.github.io/Brewing/docs/issue-001.html</link>
