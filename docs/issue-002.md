@@ -10,18 +10,15 @@
 
 ## 农牧产业
 
-1. [嘉吉 Q1 业绩发布：农业供应链板块承压](https://www.ttnews.com/)
-   大宗农产品加工利润率收窄，极端天气与物流瓶颈共振。全球粮商的盈利拐点往往先于养殖端出现——原料走势不是孤立变量，它直接锁死了下游全产业链的成本下限。（来源：TT News 原文报道）
+1. [嘉吉 Q1 业绩发布：农业供应链板块承压](https://www.ttnews.com/articles/cargill-earnings-q1-2027)
+  大宗农产品加工利润率收窄，极端天气与物流瓶颈共振。全球粮商的盈利拐点往往先于养殖端出现——原料走势不是孤立变量，它直接锁死了下游全产业链的成本下限。（来源：TT News 原文报道）
 
-2. [全球猪肉供需再平衡：区域贸易重塑](https://www.reuters.com/)
-   贸易摩擦与生物安全双重挤压下，传统出口大国的流向发生系统性迁移。活猪带不动，冻肉难平衡，本地化产能的防御属性进一步凸显。（来源：Reuters 报道）
-
-3. [美国国际贸易委员会对进口蛋氨酸启动日落复审](https://internationaltradetoday.com/)
-   反倾销税与贸易救济措施常态化。中国氨基酸企业在海外的每一寸市场份额，都在倒逼国内企业加快技术代际升级与海外本土化建厂节奏。（来源：International Trade Today 官方记录）
+2. [全球猪肉供需再平衡：区域贸易重塑](https://swineweb.com/global-pork-report-trade-shifts-accelerate-as-pork-markets-rebalance-across-asia-europe-and-latin-america/)
+   贸易摩擦与生物安全双重挤压下，传统出口大国的流向发生系统性迁移。活猪带不动，冻肉难平衡，本地化产能的防御属性进一步凸显。（来源：Global Pork Report / SwineWeb 原文报道）
 
 ## 五维健康
 
-1. [Nature Medicine：前沿肠道微生物代谢物与代谢综合征的因果链条](https://www.nature.com/)
+1. [Nature Medicine：前沿肠道微生物代谢物与代谢综合征的因果链条](https://www.nature.com/articles/s41591-025-04009-7)
    从相关性走向因果干预：特定肠道菌群衍生的代谢产物在调节胰岛素敏感性与内脏脂肪蓄积中的机制获实证。健康不是玄学，是底层的生化工程与摄入干预。（来源：Nature 系列前沿文献）
 
 ## 工具与方法
@@ -32,15 +29,12 @@
 2. [State of AI Report 2026：从前沿参数竞赛到落地真实 ROI 验收](https://www.stateof.ai/)
    大模型投资从狂热的预训练军备竞赛，全面转向企业端实际工作流的落地审查。不能带来真实人效提升的 Agent 正在被快速淘汰。（来源：State of AI 2026 官方发布）
 
-3. [哈佛商业评论：别让 AI 成为组织的大脑过载加速器](https://hbr.org/)
+3. [哈佛商业评论：别让 AI 成为组织的大脑过载加速器](https://hbr.org/2026/03/when-using-ai-leads-to-brain-fry)
    工具越快，思考的摩擦越显得珍贵。没有经过前置筛选的信息漫灌，只会摧毁团队的深度注意力。系统设计的第一步是学会做减法。（来源：HBR 原文）
-
-4. [不懂经：评《造神之后》——技术范式转移期的权力与幻觉](https://mp.weixin.qq.com/)
-   真正的变革往往发生在神话祛魅之后。当潮水退去，留在沙滩上的只有踏踏实实解决物理世界问题的工程与组织。（来源：微信原文）
 
 ## 随机一条
 
-1. [费德勒 2024 达特茅斯毕业演讲：毫不费力是个神话（Effortless is a Myth）](https://home.dartmouth.edu/)
+1. [费德勒 2024 达特茅斯毕业演讲：毫不费力是个神话（Effortless is a Myth）](https://home.dartmouth.edu/news/2024/06/2024-commencement-address-roger-federer)
    “在职业生涯打过的 1526 场单打比赛中，我赢了近 80% 的比赛，但实际上我只赢得了 54% 的得分。” 伟大不是每一分都赢，而是在输掉 46% 的分数后，下一分依然能够专注挥拍。接纳生活自带的失误率，是最高级的心理韧性。（来源：Dartmouth 官网演讲实录；段永平重点推荐）
 
 ---
