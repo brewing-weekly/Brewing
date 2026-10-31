@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大象与金鱼：AI 时代的琢磨</title>
+<style>
+:root{--ink:#1a1a1a;--dim:#6b6b6b;--rule:#e2ddd5;--paper:#fdfcf7;--accent:#8c3a2e;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font:16px/1.85 -apple-system,BlinkMacSystemFont,"PingFang SC","Songti SC","Microsoft YaHei",serif;
+  background:var(--paper);color:var(--ink);max-width:680px;margin:0 auto;padding:64px 24px 96px;-webkit-font-smoothing:antialiased;}
+h1{font-size:1.7rem;font-weight:600;line-height:1.4;letter-spacing:.01em;}
+h2{font-size:1.05rem;font-weight:600;margin:38px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--rule);}
+p{margin:12px 0;}
+p.lead{color:var(--accent);letter-spacing:.08em;font-size:.95rem;margin-top:14px;}
+p.item a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--accent);}
+p.item a:hover{color:var(--accent);}
+hr{border:none;border-top:1px solid var(--rule);margin:36px 0;}
+a{color:var(--accent);}
+.back{display:inline-block;margin-top:40px;font-size:.85rem;color:var(--dim);text-decoration:none;}
+.note{color:var(--dim);font-size:.85rem;}
+small{display:block;margin:4px 0;font-size:.8rem;color:var(--dim);line-height:1.7;}
+</style>
+</head>
+<body>
+<h1>大象与金鱼：AI 时代的琢磨</h1>
+<p>Google 工程师 Dave Rensin 今年四月发了篇长文，十月把内部用的插件开源了，据说 Google 内部有数千工程师在用。方法的名字叫 Elephant-Goldfish Model，大象金鱼模型。</p>
+<p>定义很干脆，原文第一句就是："An elephant never forgets."</p>
+<p>大象，是带着全部上下文的 AI 会话，以及它帮你写出来的设计文档。大象记得所有的机构知识、每一个微观决策、你们争论过的每一句话。</p>
+<p>金鱼，是一个全新的、零记忆的 AI 会话。它只知道你直接放在它面前的东西。</p>
+<p>做法：Feed the Elephant; test it against the Goldfish。喂饱大象，拿金鱼去考它。</p>
+<h2>琢</h2>
+<p>大象做的事，是「琢」。治玉叫琢。</p>
+<p>你把需求、边界、取舍、架构，一点点喂给 AI，让它问你问题，挑战你的假设，逼你把没想清楚的地方想清楚。最后写成一份设计文档。这是下刀定大形，一次成型。</p>
+<p>Rensin 说了个关键数字：sizeof(docs) &lt;&lt; sizeof(code)。用 plain English 的设计文档喂 AI，比让它读几十万行代码便宜得多。文档是压缩过的上下文，大象吃得下。</p>
+<h2>磨</h2>
+<p>金鱼做的事，是「磨」。治石叫磨。</p>
+<p>新开一个会话，零记忆，只给它那份设计文档，问三个问题：看得懂吗？有什么漏掉的？照着能做出来吗？</p>
+<p>这是水磨功夫。金鱼不懂你的前因后果，它只认眼前的文档。文档里没写清楚的，它一定会问；你想当然的地方，它一定会挑。Rensin 说，大概 30% 的建议极有价值。</p>
+<p>这里有个细节：Rensin 特别提醒，模型一旦开始说「你说得太对了」，就要把它拽回来——「你同意我时并没有在帮我，挑战我才是。」金鱼之所以有用，恰恰因为它没被你的上下文「收买」。全新的，不欠人情。</p>
+<p>磨到只剩挑刺为止。没有一次到位这回事。</p>
+<h2>翻转</h2>
+<p>以前缺的是琢的功夫。写不出来，想不清楚。</p>
+<p>现在琢变便宜了。AI 一秒钟堆出上下文，你只管回答问题、做判断。</p>
+<p>缺的是磨的耐心。生成一万字容易，磨到每一句都经得起 fresh eyes 很难。AI 写得越快，磨的价值越高。</p>
+<p>所以：生成不值钱，琢磨值钱。磨，是 AI 时代最值钱的手艺。</p>
+<h2>如切如磋，如琢如磨</h2>
+<p>《詩·衛風·淇奧》：「有匪君子，如切如磋，如琢如磨。」</p>
+<p>切磋琢磨，本来就是两种视角的事。一个人磨不了自己。这就是为什么金鱼必须是「全新会话、零记忆」——自己审自己，审不出来。</p>
+<p>最后，磨到什么程度停，人说了算。AI 能磨，但什么叫磨好了，是人的判断。</p>
+<p>判断，还是在人身上。</p>
+<h2>出处</h2>
+<small>Dave Rensin 原文：https://drensin.medium.com/elephants-goldfish-and-the-new-golden-age-of-software-engineering-c33641a48874</small>
+<small>开源插件 egm.dev：https://egm.dev</small>
+<small>《淇奧》全文：「瞻彼淇奧，綠竹猗猗。有匪君子，如切如磋，如琢如磨。瑟兮僴兮，赫兮咺兮。有匪君子，終不可諼兮。」——切磋琢磨本是治玉治石之功，後喻品德學問的砥礪。</small>
+<a class="back" href="./../index.html">← 返回目录</a>
+</body>
+</html>
