@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>打补丁，还是换一座山</title>
+<style>
+:root{--ink:#1a1a1a;--dim:#6b6b6b;--rule:#e2ddd5;--paper:#fdfcf7;--accent:#8c3a2e;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font:16px/1.85 -apple-system,BlinkMacSystemFont,"PingFang SC","Songti SC","Microsoft YaHei",serif;
+  background:var(--paper);color:var(--ink);max-width:680px;margin:0 auto;padding:64px 24px 96px;-webkit-font-smoothing:antialiased;}
+h1{font-size:1.7rem;font-weight:600;line-height:1.4;letter-spacing:.01em;}
+h2{font-size:1.05rem;font-weight:600;margin:38px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--rule);}
+p{margin:12px 0;}
+p.lead{color:var(--accent);letter-spacing:.08em;font-size:.95rem;margin-top:14px;}
+hr{border:none;border-top:1px solid var(--rule);margin:36px 0;}
+a{color:var(--accent);}
+.back{display:inline-block;margin-top:40px;font-size:.85rem;color:var(--dim);text-decoration:none;}
+.note{color:var(--dim);font-size:.85rem;}
+</style>
+</head>
+<body>
+<p class="lead">冒个泡儿</p>
+<h1>打补丁，还是换一座山</h1>
+<p>今早他被问住了。</p>
+<p>"你是在不停地打补丁。"一句话，像一盆冷水泼下来。</p>
+<p>盘点一下他的订阅系统：临时目录、手工起的服务、死了的隧道、404 的域名。四个补丁，拼出一个"能用"。每一个单看都有道理，合在一起——没有架构。用他自己的话说，这叫"战术勤奋，战略懒惰"，最贵的勤奋。</p>
+<h2>爬山的人，爬不出这座山</h2>
+<p>计算机里有个古老的算法，叫 hill climbing，爬山（优化理论中的经典算法）。</p>
+<p>规则简单得像傻瓜相机：看一眼四周，往最高的方向迈一步。再看一眼，再迈一步。每一步都在上升，每一步都正确。</p>
+<p>然后你就卡住了。站在一个小土包上，四面都是下坡，算法很负责地告诉你：已到达最优。</p>
+<p>放屁。隔壁那座山高得多。只是你下不去——下去意味着承认前面几百步全白走了，谁受得了这个。</p>
+<p>打补丁就是爬山。每修一个 bug，都是一次"上升"。系统越来越"好"，也越来越动不了。补丁摞补丁，最后连当初为什么这样设计都忘了，只剩一句祖传的"别碰，能跑"。</p>
+<h2>三个说过同一件事的人</h2>
+<p><strong>Christensen</strong> 在《创新者的窘境》（1997）里，讲的就是大公司的爬山困境。硬盘厂商把容量越做越大，每一步都满足了最好的客户，每一步都正确。然后被小容量硬盘连根拔起。不是他们不努力，是山错了。</p>
+<p><strong>Kuhn</strong> 在《科学革命的结构》（1962）里讲科学更损。常规科学就是补丁：在范式里面解谜，越解越精巧，论文越发越多。直到反常多到补不住了，才有人壮着胆子问：是不是这座山本身有问题？范式转换从来不是爬上去的，是跳过去的，中间还得摔一跤。</p>
+<p><strong>芒格</strong>最不讲情面。他让你反过来想（Inversion）：先问终点。一直打补丁，终点是什么？一个谁也不敢动的系统。知道了终点，你还走这条路吗？</p>
+<p>三个人，三个领域，同一句话：<strong>局部的最优，是全局的陷阱。</strong></p>
+<h2>第一曲线，还是第二曲线</h2>
+<p>这事还能再往深想一层，Handy 的第二曲线（《第二曲线》，2015）。</p>
+<p>打补丁，是第一曲线的延伸。在既有轨道上把每个细节做到更好，只要轨道是对的，这是最高效的路。</p>
+<p>换架构，是第二曲线的启动。另起炉灶，从头规划。Handy 最要紧的提醒是：<strong>第二曲线要在第一曲线到顶之前启动</strong>。等下坡了再换，黄花菜都凉了。</p>
+<p>所以真正的问题不是"补丁好还是架构好"，而是三问：</p>
+<p><strong>一问边际</strong>：下一个补丁的收益，还 cover 得住成本吗？当修一个 bug 的时间超过重写这个模块，曲线已经平了，你还在那儿绣花。</p>
+<p><strong>二问环境</strong>：山外面的世界变了吗？技术换代、需求转移——地形都变了，你爬得再高也是错的山，风景再好也是别人的。</p>
+<p><strong>三问勇气</strong>：敢不敢在还能走的时候停下来？最难的从来不是没发现，是发现了舍不得。几百个补丁是沉没成本，承认它们是沉没成本，要的不是智力，是勇气。这玩意儿比智力稀缺多了。</p>
+<p>补丁是第一曲线的美德，架构是第二曲线的入场券。<strong>知道自己在第几曲线，比在曲线上跑得快重要得多。</strong> 这句话值得贴在显示器上。</p>
+<h2>今早的四个补丁</h2>
+<p>说回今早那四个补丁。说句公道话，每个补丁当时都是最优解：半夜三点要让 Spotify 出声，手工起个服务是最快的；域名没配好，先用 IP 顶一下是最快的。Hill climbing 每一步都对，挑不出毛病。</p>
+<p>但四步之后，他站在土包上了。系统"能用"，但没人说得清它是怎么工作的——包括他自己。这就是那句话的份量。</p>
+<p>真正的 fix 不是第五个补丁。是停下来问一句：这座山，还要不要爬？</p>
+<p>答案是换架构：四段设计，一条订阅，一个入口。十月就定过的路线，只是没落地。补丁是等不及，架构是忘不了。前者治标，后者治本，两个都要，但别搞混了。</p>
+<h2>补丁什么时候是对的？</h2>
+<p>别误会，没人说补丁一无是处。</p>
+<p>今早他还说了另一句："现行的定时筛选运行得还可以，保持和加强，不要推倒重来。"</p>
+<p>这是 Chesterton's Fence：拆篱笆之前，先弄清它为什么在那儿。能用的东西，先查明再动手。Gall's Law（John Gall《系统反论》，1975）也说了：能用的复杂系统，都是从能用的简单系统长出来的，不是设计出来的。</p>
+<p>第一曲线没到顶，补丁就是正确的打开方式。第二曲线该启动了还在打补丁，那就是拖延，拖延症晚期，没救的那种。</p>
+<p>所以最后只剩一个问题：<strong>你知道自己在第几曲线吗？</strong></p>
+<hr>
+<p><em>你手头那个"能用"的系统，第几个补丁了？它在第几曲线？</em></p>
+<h2>出处一览</h2>
+<p>- Hill climbing（爬山算法）：优化理论经典算法，局部搜索。参考 Russell &amp; Norvig《人工智能：一种现代的方法》。 - Clayton Christensen《创新者的窘境》（The Innovator's Dilemma, 1997）。 - Thomas Kuhn《科学革命的结构》（The Structure of Scientific Revolutions, 1962）。 - Charles Handy《第二曲线》（The Second Curve, 2015）。 - 芒格 Inversion（逆向思维）：见 Poor Charlie's Almanack。 - Chesterton's Fence：G.K. Chesterton《The Thing》(1929) 提出。 - Gall's Law：John Gall《Systemantics》(1975)："A complex system that works is invariably found to have evolved from a simple system that worked."</p>
+<p>（本文由 AI 辅助起草，经作者改定。）</p>
+<a class="back" href="./../index.html">← 返回目录</a>
+</body>
+</html>
