@@ -1,6 +1,6 @@
 # 大象与金鱼：AI 时代的琢磨
 
-Google 工程师 Dave Rensin 今年四月发了篇长文，十月把内部用的插件开源了，据说 Google 内部有数千工程师在用。方法的名字叫 Elephant-Goldfish Model，大象金鱼模型。
+Google 工程师 Dave Rensin 今年四月发了篇长文，十月把内部用的插件开源了，据作者介绍，Google 内部有数千工程师在用。方法的名字叫 Elephant-Goldfish Model，大象金鱼模型。
 
 定义很干脆，原文第一句就是："An elephant never forgets."
 
@@ -52,6 +52,6 @@ Rensin 说了个关键数字：sizeof(docs) << sizeof(code)。用 plain English 
 
 ## 出处
 
-<small>Dave Rensin 原文：https://drensin.medium.com/elephants-goldfish-and-the-new-golden-age-of-software-engineering-c33641a48874</small>
-<small>开源插件 egm.dev：https://egm.dev</small>
+<small>Dave Rensin 原文：[https://drensin.medium.com/elephants-goldfish-and-the-new-golden-age-of-software-engineering-c33641a48874](https://drensin.medium.com/elephants-goldfish-and-the-new-golden-age-of-software-engineering-c33641a48874)</small>
+<small>开源插件 egm.dev：[https://egm.dev](https://egm.dev)</small>
 <small>《淇奧》全文：「瞻彼淇奧，綠竹猗猗。有匪君子，如切如磋，如琢如磨。瑟兮僴兮，赫兮咺兮。有匪君子，終不可諼兮。」——切磋琢磨本是治玉治石之功，後喻品德學問的砥礪。</small>

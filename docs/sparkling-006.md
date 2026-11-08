@@ -1,4 +1,4 @@
-# 验证是地板（冒泡版 v0.2，2026-11-05）
+# 验证是地板
 
 Addy Osmani，前 Chrome 工程负责人，现在 Anthropic 写 Claude Code。8 月底他写了篇长文《Agentic Skill Decay》，讲 Agent 越好用，人的手艺退化得越快。
 
@@ -56,22 +56,22 @@ AI 越强，地板越值钱，这事反直觉。
 
 Addy 文末有张 slides，页脚写着："I still use agents aggressively, I just don't want the issue to close while my mental model stays where it was."
 
-我照样重度用 agent，我只是不想单子关了，我的脑子还停在原地。
+我照样重度用 agent，我只是不想事情做完了，我的脑子还停在原地。
 
-这句话可以当座右铭：单子可以关，脑子不能停。
+这句话可以当座右铭：事情可以做完，脑子不能停。
 
 你的地板，铺好了吗？
 
 ---
 
-## 出处（2026-11-05 Eva 核验原文）
+## 出处
 
 - Addy Osmani《Agentic Skill Decay》，2026-08-31，https://addyosmani.com/blog/agentic-skill-decay/
 - "So verification is the floor and imagination is the ceiling."——原文 "You can only prompt what you can imagine" 一节
-- Trio 学习实验：AI 组 50% vs 手工组 67%——原文引用的 2026 年 Anthropic 研究（原文链接指向 anthropic.com，具体论文链接待补）
-- 约 40 万 Claude Code 会话研究：对任务越理解，"verified success" 概率越高——原文引用的 Anthropic 研究（具体论文链接待补）
+- Trio 学习实验：AI 组 50% vs 手工组 67%——原文引用的 2026 年 Anthropic 研究（原文链接指向 anthropic.com）
+- 约 40 万 Claude Code 会话研究：对任务越理解，"verified success" 概率越高——原文引用的 Anthropic 研究
 - "I still use agents aggressively, I just don't want the issue to close while my mental model stays where it was."——原文首张 slides 页脚
-- 中文转述《Claude 大牛也担心把脑子外包给 AI》：二道贩子，仅作引子，不引为信源
-- 11-05 晨间素材：Alex 主聊天原话"记忆也是生成型的""不能把思考和记忆全外包给 AI"（2026-11-05 09:00 原文）
+- 中文转述《Claude 大牛也担心把脑子外包给 AI》：仅作引子，不引为信源
+- Alex 原话：「记忆也是生成型的」「不能把思考和记忆全外包给 AI」（2026-11-05）
 
 （本文由 AI 辅助起草，经作者改定。）
