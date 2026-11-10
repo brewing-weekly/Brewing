@@ -31,6 +31,9 @@ hr{border:none;border-top:1px solid var(--rule);margin:36px 0;}
 a{color:var(--accent);}
 .back{display:inline-block;margin-top:40px;font-size:.85rem;color:var(--dim);text-decoration:none;}
 .note{color:var(--dim);font-size:.85rem;}
+figure{margin:22px 0;}
+figure img{width:100%;height:auto;border-radius:2px;display:block;}
+figure figcaption{margin-top:8px;font-size:.82rem;color:var(--dim);line-height:1.6;}
 small{display:block;margin:4px 0;font-size:.8rem;color:var(--dim);line-height:1.7;}
 </style>"""
 
@@ -72,6 +75,15 @@ def convert(md, kicker=None):
         elif s.startswith("## "):
             flush()
             out.append("<h2>%s</h2>" % inline(s[3:].strip()))
+        elif re.match(r"^!\[[^\]]*\]\([^)]+\)$", s):
+            flush()
+            m2 = re.match(r"^!\[([^\]]*)\]\(([^)]+)\)$", s)
+            alt, src = m2.group(1), m2.group(2)
+            out.append(
+                '<figure><img src="%s" alt="%s" loading="lazy">'
+                '<figcaption>%s</figcaption></figure>'
+                % (htmllib.escape(src, quote=True), htmllib.escape(alt, quote=True), inline(alt))
+            )
         elif s.startswith(">"):
             flush()
             out.append('<p class="lead">%s</p>' % inline(s.lstrip("> ").strip()))
