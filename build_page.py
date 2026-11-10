@@ -31,6 +31,10 @@ hr{border:none;border-top:1px solid var(--rule);margin:36px 0;}
 a{color:var(--accent);}
 .back{display:inline-block;margin-top:40px;font-size:.85rem;color:var(--dim);text-decoration:none;}
 .note{color:var(--dim);font-size:.85rem;}
+h3{font-size:.98rem;font-weight:600;margin:26px 0 8px;}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:.86rem;}
+th,td{border:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top;line-height:1.6;}
+th{background:#f4f0e8;font-weight:600;}
 figure{margin:22px 0;}
 figure img{width:100%;height:auto;border-radius:2px;display:block;}
 figure figcaption{margin-top:8px;font-size:.82rem;color:var(--dim);line-height:1.6;}
@@ -84,6 +88,32 @@ def convert(md, kicker=None):
                 '<figcaption>%s</figcaption></figure>'
                 % (htmllib.escape(src, quote=True), htmllib.escape(alt, quote=True), inline(alt))
             )
+        elif s.startswith("### "):
+            flush()
+            out.append("<h3>%s</h3>" % inline(s[4:].strip()))
+        elif s.startswith("|"):
+            flush()
+            rows = []
+            j = i
+            while j < len(lines) and lines[j].strip().startswith("|"):
+                rows.append(lines[j].strip())
+                j += 1
+            cells = [[c.strip() for c in r.strip("|").split("|")] for r in rows]
+            # 第二行是 |---|---| 分隔行则去掉
+            if len(cells) >= 2 and all(re.fullmatch(r":?-{2,}:?", c or "-") for c in cells[1]):
+                head, body = cells[0], cells[2:]
+            else:
+                head, body = None, cells
+            tbl = ["<table>"]
+            if head:
+                tbl.append("<thead><tr>%s</tr></thead>" % "".join("<th>%s</th>" % inline(c) for c in head))
+            tbl.append("<tbody>")
+            for r in body:
+                tbl.append("<tr>%s</tr>" % "".join("<td>%s</td>" % inline(c) for c in r))
+            tbl.append("</tbody></table>")
+            out.append("".join(tbl))
+            i = j
+            continue
         elif s.startswith(">"):
             flush()
             out.append('<p class="lead">%s</p>' % inline(s.lstrip("> ").strip()))
