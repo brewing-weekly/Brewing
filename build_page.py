@@ -137,6 +137,10 @@ def convert(md, kicker=None):
         elif re.match(r"^[*\-]\s", s):
             flush()
             out.append('<p class="item">· %s</p>' % inline(re.sub(r"^[*\-]\s+", "", s)))
+        elif s.startswith("<iframe") and s.endswith("</iframe>"):
+            # 内嵌结构页等：整行原样输出（唯一放行的原始 HTML，其余一律转义）
+            flush()
+            out.append(s)
         elif s.startswith("<small>") and s.endswith("</small>"):
             flush()
             inner = s[len("<small>"):-len("</small>")]
