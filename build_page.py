@@ -57,8 +57,27 @@ def inline(text):
 
 
 def convert(md, kicker=None):
-    """md 文本 → 正文 HTML 片段（不含 <html> 外壳）。"""
+    """md 文本 → 正文 HTML 片段（不含 <html> 外壳）。
+
+    内部节过滤（2026-11-14 #705 修）：渲染前先把「标题含「（内部，不发布）」的节」
+    整段剥掉（含节内所有嵌套内容直到下一个同/更高层级标题），保留锁定版 MD 原件。
+    """
     lines = md.replace("\r\n", "\n").split("\n")
+    # 内部节过滤（#705）：标题含「（内部，不发布）」的整节不进线上页。
+    # 从该标题行起丢弃，直到遇到同级或更高级的标题为止；子标题仍在该节内，一并丢。
+    filtered, skip_level = [], 0
+    for line in lines:
+        m = re.match(r"^(#{1,6})\s", line)
+        if skip_level:
+            if m and len(m.group(1)) <= skip_level:
+                skip_level = 0          # 本节结束，本行属于下一节，正常收下
+            else:
+                continue                # 节内正文或更深子标题，丢弃
+        if m and "（内部，不发布）" in line:
+            skip_level = len(m.group(1))
+            continue
+        filtered.append(line)
+    lines = filtered
     out, buf, i = [], [], 0
 
     def flush():
@@ -184,6 +203,18 @@ def selftest():
     assert '<p class="note">注：说明</p>' in got, got
     # 转义：原文的 < > 不应变成标签
     assert "&lt;script&gt;" in convert("a <script> b"), "未转义"
+    # 内部节过滤（#705）：标了「内部，不发布」的整节（含子节）不得进正文
+    internal = (
+        "## 公开节\n\n公开内容。\n\n"
+        "## 起草核验记录（内部，不发布）\n\nFeed 39 次、得到大脑 13 次\n\n"
+        "### 内部子标题\n\n内部明细\n\n"
+        "## 下一公开节\n\n仍公开。\n"
+    )
+    gh = convert(internal)
+    assert "起草核验记录" not in gh, "内部节标题泄漏"
+    assert "Feed 39" not in gh and "得到大脑" not in gh, "内部节正文泄漏"
+    assert "内部子标题" not in gh and "内部明细" not in gh, "内部子节泄漏"
+    assert "下一公开节" in gh, "内部节之后的公开节被误删"
     print("selftest ok")
 
 
