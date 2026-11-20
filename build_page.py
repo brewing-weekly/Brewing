@@ -73,7 +73,7 @@ def convert(md, kicker=None):
                 skip_level = 0          # 本节结束，本行属于下一节，正常收下
             else:
                 continue                # 节内正文或更深子标题，丢弃
-        if m and "（内部，不发布）" in line:
+        if m and ("（内部，不发布）" in line or "（不发布）" in line):
             skip_level = len(m.group(1))
             continue
         filtered.append(line)
@@ -215,6 +215,11 @@ def selftest():
     assert "Feed 39" not in gh and "得到大脑" not in gh, "内部节正文泄漏"
     assert "内部子标题" not in gh and "内部明细" not in gh, "内部子节泄漏"
     assert "下一公开节" in gh, "内部节之后的公开节被误删"
+    # 内部注记（不发布）变体（#721 食货志首期实测）：不带「内部，」也应整节过滤
+    var = "## 公开节\n\n公开。\n\n## 内部注记（不发布）\n\n内部口径不得上线。\n\n## 结尾\n\n结束。\n"
+    gv = convert(var)
+    assert "内部注记" not in gv and "内部口径不得上线" not in gv, "（不发布）变体泄漏"
+    assert "结尾" in gv and "结束。" in gv, "变体内部节之后的公开节被误删"
     print("selftest ok")
 
 
